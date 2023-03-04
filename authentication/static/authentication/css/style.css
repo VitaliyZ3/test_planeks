@@ -1,0 +1,14 @@
+.center-div{
+     margin: 0 auto;
+     padding-top: 10%;
+     padding-left: 10%;
+     max-width: 700px;
+}
+button{
+    margin-top: 2%;
+}
+.registration{
+    margin: 0 auto;
+    padding-top: 5%;
+    max-width: 700px;
+}

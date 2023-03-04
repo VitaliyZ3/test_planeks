@@ -1,0 +1,19 @@
+{% extends "authentication/base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}Create an account{% endblock %}
+
+{% block main %}
+
+<div class='registration'>
+<h1>Реєстрація</h1>       
+    <form action="." method="post">
+        {{ user_form|crispy }}
+        {% csrf_token %}
+        <hr>
+       <input type="submit" value="Зареєструватися" class="btn btn-primary">
+    </form>
+
+</div>
+
+
+{% endblock %}
