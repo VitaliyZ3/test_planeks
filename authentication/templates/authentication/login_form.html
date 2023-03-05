@@ -6,9 +6,9 @@
     {{ form }}
     <input type="submit" value="Войти">
 </form>!-->
-
+</style>
 <div class="center-div">
-        <h1>Авторизация</h1>
+        <h1>Login</h1>
         <form action="{% url 'auth' %}" method="post" enctype="multipart/form-data">
 
             {% csrf_token %}
@@ -23,7 +23,7 @@
             </div>
             <div>{{ form.non_field_errors }}</div>
             
-            <button type="submit" class="btn btn-primary">Войти</button>
+            <button type="submit" class="btn btn-primary">Login</button>
         </form>
 
     </div>

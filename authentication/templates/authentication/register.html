@@ -5,12 +5,12 @@
 {% block main %}
 
 <div class='registration'>
-<h1>Реєстрація</h1>       
+<h1>Sign Up</h1>       
     <form action="." method="post">
         {{ user_form|crispy }}
         {% csrf_token %}
         <hr>
-       <input type="submit" value="Зареєструватися" class="btn btn-primary">
+       <input type="submit" value="Sign Up" class="btn btn-primary">
     </form>
 
 </div>

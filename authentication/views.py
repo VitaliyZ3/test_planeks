@@ -1,10 +1,13 @@
 from typing import ContextManager
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import redirect, render
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import (
+    authenticate, 
+    login, 
+    logout)
 from .forms import LoginForm, UserRegistrationForm
+from django.contrib.auth import logout
 from django.views import View
-
 # Create your views here.
 
 
@@ -15,7 +18,6 @@ class LoginView(View):
         return render(request, template_name='authentication/login_form.html', context=context)
     
     def post(self, request):
-        
         form = LoginForm(request.POST or None)
         if form.is_valid():
             user = authenticate(username = form.cleaned_data['username'], password = form.cleaned_data['password'])
@@ -36,3 +38,7 @@ def register(request):
     else:
         user_form = UserRegistrationForm()
     return render(request, 'authentication/register.html', {'user_form': user_form})
+
+def logout_user(request):
+    logout(request)
+    return redirect('login')

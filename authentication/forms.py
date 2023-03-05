@@ -4,17 +4,17 @@ from django.contrib.auth.models import User
 
 
 class LoginForm(Form):
-    username = forms.CharField(max_length=100, label='Имя')
-    password = forms.CharField(widget=forms.PasswordInput, label='Пароль')
+    username = forms.CharField(max_length=100, label='Username')
+    password = forms.CharField(widget=forms.PasswordInput, label='Password')
 
     def clean(self):
         username = self.data['username']
         user = User.objects.filter(username=username).first()
         if not user:
-            raise  forms.ValidationError('Пользователь не найден')
+            raise  forms.ValidationError('User does not exist')
         validate_user = user.check_password(self.cleaned_data['password'])
         if not validate_user:
-            raise  forms.ValidationError('Пароль неверный')
+            raise  forms.ValidationError('Password does not match')
 
         return self.cleaned_data
 

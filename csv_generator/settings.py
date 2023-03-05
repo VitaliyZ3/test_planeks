@@ -37,6 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # installed apps
+    'crispy_forms',
+    'crispy_bootstrap4',
+    # apps
+    'csv_main.apps.CsvMainConfig',
+    'authentication.apps.AuthenticationConfig',
+    
 ]
 
 MIDDLEWARE = [
@@ -69,6 +76,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'csv_generator.wsgi.application'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
