@@ -1,0 +1,41 @@
+{% extends 'csv_main/base.html' %}
+{% block title %}
+Data schemas
+{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+      <div class="content d-inline-block">
+        <p class="fs-1 mb-0">Data schemas</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="new-schema-btn d-inline-block text-end">
+        <button type="button" class="btn btn-success">Add new schema</button>
+      </div>
+    </div>
+  </div>
+<table class="table table-bordered">
+<thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Modified</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user_scheme in user_schemas %}
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ user_scheme.title }}</td>
+            <td>{{ user_scheme.last_modified }}</td>
+            <td>
+                <a href="#" class="link-primary">Edit scheme</a>
+                <a href="#" class="link-danger">Delete</a>
+            </td>
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

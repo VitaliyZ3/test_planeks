@@ -1,0 +1,40 @@
+.container-fluid{
+    padding-left: 4%;
+    padding-right: 4%;
+}
+.user-nav{
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 14px;
+    color: gray;
+}
+.nav-link{
+    display: inline-block;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+  
+.fs-1 {
+font-size: 2rem;
+font-weight: bold;
+margin: 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.main{
+    margin-left: 4%;
+    margin-right: 4%;
+}
+.table {
+    width: 80%;
+    max-width: 70%;
+}

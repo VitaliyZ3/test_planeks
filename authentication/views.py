@@ -22,7 +22,7 @@ class LoginView(View):
         if form.is_valid():
             user = authenticate(username = form.cleaned_data['username'], password = form.cleaned_data['password'])
             login(request, user)
-            return HttpResponseRedirect('/admin')
+            return HttpResponseRedirect('/')
         context = {'form': form}
        
         return render(request, template_name='authentication/login_form.html', context=context)
@@ -41,4 +41,4 @@ def register(request):
 
 def logout_user(request):
     logout(request)
-    return redirect('login')
+    return redirect('main_page')
