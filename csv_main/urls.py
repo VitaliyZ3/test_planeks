@@ -1,5 +1,5 @@
-from django.urls import path, re_path
-from . import views 
-urlpatterns = [
-    path('', views.UserDataSchemas.as_view(), name='main_page')
-]
+from django.urls import path
+
+from . import views
+
+urlpatterns = [path("", views.UserDataSchemasView.as_view(), name="main_page")]

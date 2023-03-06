@@ -17,13 +17,11 @@
     align-items: center;
     margin-bottom: 20px;
 }
-  
 .fs-1 {
 font-size: 2rem;
 font-weight: bold;
 margin: 0;
 }
-
 .row {
     display: flex;
     justify-content: space-between;
@@ -34,7 +32,13 @@ margin: 0;
     margin-left: 4%;
     margin-right: 4%;
 }
-.table {
+/* .table {
     width: 80%;
     max-width: 70%;
+} */
+.data-schemas{
+    width: 80%;
+}
+a{
+    text-decoration: none;
 }

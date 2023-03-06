@@ -3,15 +3,16 @@
 Data schemas
 {% endblock %}
 {% block content %}
+<div class="data-schemas">
 <div class="row">
     <div class="col-md-6">
       <div class="content d-inline-block">
         <p class="fs-1 mb-0">Data schemas</p>
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 text-end" id="add-new-schemas">
       <div class="new-schema-btn d-inline-block text-end">
-        <button type="button" class="btn btn-success">Add new schema</button>
+        <button type="button" class="btn btn-success">New schema</button>
       </div>
     </div>
   </div>
@@ -28,7 +29,7 @@ Data schemas
     {% for user_scheme in user_schemas %}
         <tr>
             <th scope="row">{{ forloop.counter }}</th>
-            <td>{{ user_scheme.title }}</td>
+            <td><a href="#" class="link-primary">{{ user_scheme.title }}</a></td>
             <td>{{ user_scheme.last_modified }}</td>
             <td>
                 <a href="#" class="link-primary">Edit scheme</a>
@@ -38,4 +39,5 @@ Data schemas
     {% endfor %}
   </tbody>
 </table>
+</div>
 {% endblock %}
