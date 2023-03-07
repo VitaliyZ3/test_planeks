@@ -6,8 +6,9 @@ models_to_reg = [
     models.TypeRule,
     models.ColumnType,
     models.Column,
-    models.Column_separator,
-    models.String_character,
+    models.ColumnSeparator,
+    models.StringCharacter,
+    models.GeneratedCVS,
     models.Schema,
 ]
 
